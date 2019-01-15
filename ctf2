@@ -1,0 +1,56 @@
+if blind sqlithen try OOB or <meta http-equiv="refresh" content="0; url=http://SERVER:8088/hi">
+
+ZIP
+=========
+zip -ff a.zip //to fix it
+zipinfo a.zip
+zipdetails a.zip
+
+ANDROID
+===========
+apktool d asd.pk //it will smalli code and classes.dex
+d2j-dex2jar classes.dex //produced classess.jar
+you can use online site http://www.decompileandroid.com/ to download java code from jar file
+
+WEB
+========
+dirb 
+nikto
+check certificate,dig record,header,directory, response,change get to post,change user-agent,try remove user-agent or sqli,try sqli in admin panel or forgotpass,
+
+GIT
+===========
+
+
+use extractor.sh to extract all
+https://0ldsk00lblog.ctf.internetwache.org/.git/logs/HEAD
+gitdumper.sh
+git extractor
+git reflog show HEAD
+git  status
+git diff  //showlast difference
+git log -p //see allcommit
+git log -g//all commit
+git checkout hash //extract commit file
+git status //check latest status file deleted or created
+for d in *; do for f in $d/*; do git cat-file -p $d$(basename "$f"); done; done | grep flag.txt   //can run from objects dirctory to find flag.txt or use |less or |grep flag
+
+1.see all commit using http://localhost/.git/logs/HEAD ,its prints commit 07603070376d63d911f608120eb4b5489b507692
+here 07 is folder,so access fileusing http://localhost/.git/objects/07/603070376d63d911f608120eb4b5489b507692
+ and can download
+but you can aslorun git cat-file  -p 07603070376d63d911f608120eb4b5489b507692 //its print tree  534dfg3....hash value
+now again run git cat-file -p  534df.... //its print blob 2342da4ee.......
+now run git cat-file -p 534df .. //it prints file content 
+
+sqlite3
+=========
+
+Forensic
+==========
+volatility
+foremost
+
+
+wireshark
+==========
+
